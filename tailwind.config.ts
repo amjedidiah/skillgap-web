@@ -8,7 +8,22 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        inter: ["var(--font-inter)"],
+        "general-sans": ["var(--font-general-sans)"],
+      },
+      colors: {
+        "twitter-blue": "#1D9BF0",
+        grey: {
+          DEFAULT: "#8F8F8F",
+          100: "#E6E6E6",
+        },
+        "lil-dark-blue": "#0E80CE",
+      },
+    },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        lg: "2rem",
       },
     },
   },

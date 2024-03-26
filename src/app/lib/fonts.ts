@@ -1,7 +1,8 @@
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 
-export const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
+const generalSans = localFont({
+  src: "../fonts/GeneralSans-Variable.ttf",
+  variable: "--font-general-sans",
 });
+
+export default generalSans;
