@@ -2,13 +2,13 @@
 import { SGLogo } from "@/lib/icons";
 import LandingHeaderNav from "@/components/landing/landing-header-nav";
 import { RiMenu3Line } from "react-icons/ri";
-import { useCallback, useState } from "react";
+import { memo, useCallback, useState } from "react";
 import { Link } from "react-scroll";
 import { cn } from "@/lib/utils";
 import useAppDownloadLink from "@/hooks/use-app-download-link";
 import { isAppLive } from "@/lib/constants";
 
-export default function LandingHeader() {
+const LandingHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = useCallback(() => setIsMenuOpen((prev) => !prev), []);
   const { handleDownloadApp } = useAppDownloadLink();
@@ -43,4 +43,6 @@ export default function LandingHeader() {
       </div>
     </header>
   );
-}
+};
+
+export default memo(LandingHeader);

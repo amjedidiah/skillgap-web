@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function LandingJumbo() {
   return (
-    <section id="home" className="pt-[42px] relative">
+    <section id="home" className="pt-[42px] relative overflow-y-hidden pb-4">
       <article className="container">
         <div className="flex flex-col max-w-[900px] mx-auto gap-16 text-center">
           <div className="flex flex-col gap-4">

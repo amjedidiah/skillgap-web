@@ -11,7 +11,7 @@ const config: Config = {
         "general-sans": ["var(--font-general-sans)"],
       },
       colors: {
-        "twitter-blue": "#1D9BF0",
+        "twitter-blue": { DEFAULT: "#1D9BF0", 100: "#BCE1FB" },
         grey: {
           DEFAULT: "#8F8F8F",
           100: "#E6E6E6",
@@ -22,6 +22,10 @@ const config: Config = {
           100: "#F1F9FE",
         },
         "dm-l2": "#1D1F20",
+        unknown: {
+          100: "#320A01",
+          200: "#25190E",
+        },
       },
     },
     container: {
