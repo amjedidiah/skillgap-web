@@ -47,46 +47,48 @@ const HowItWorks = () => {
 
   return (
     <section id="howItWorks" className="py-10 lg:py-[88px] bg-twitter-blue">
-      <div className="container grid lg:grid-cols-2 gap-11 items-center">
-        <div className="flex flex-col pt-[18px] pr-9 pb-[13px] pl-6">
-          {tabs.map(({ title, description, name }) => (
-            <div
-              key={title}
-              className={cn(
-                "flex gap-12 hover:bg-twitter-blue-100 p-4 hover:rounded-lg hover:border-2 hover:border-black hover:shadow-winner hover:pr-8 cursor-pointer group items-center justify-between",
-                {
-                  "bg-twitter-blue-100 rounded-lg border-black border-2 shadow-winner pr-8":
-                    activeName === name,
-                }
-              )}
-              onMouseOver={() => handleSetActiveName(name)}
-            >
-              <div className="flex flex-col gap-2">
-                <p className="text-unknown-200 text-xl font-bold -leading-[0.2px]">
-                  {title}
-                </p>
-                <p
-                  className={cn(
-                    "text-dm-l2 group-hover:text-unknown-100 -leading-[0.16px] max-w-[425px]",
-                    {
-                      "text-unknown-100": activeName === name,
-                    }
-                  )}
-                >
-                  {description}
-                </p>
-              </div>
-              <span
-                className={cn("hidden group-hover:inline-block", {
-                  "inline-block": activeName === name,
-                })}
+      <div className="container grid lg:grid-cols-2 gap-6 lg:gap-11 items-center">
+        <div className="max-w-full overflow-scroll py-4">
+          <div className="flex lg:flex-col pt-[18px] pr-9 pb-[13px] pl-6 max-sm:order-2 max-sm:gap-3">
+            {tabs.map(({ title, description, name }) => (
+              <div
+                key={title}
+                className={cn(
+                  "flex max-lg:w-48 flex-shrink-0 gap-12 hover:bg-twitter-blue-100 p-4 hover:rounded-lg hover:border-2 hover:border-black hover:shadow-winner hover:pr-8 cursor-pointer group items-center justify-between",
+                  {
+                    "bg-twitter-blue-100 rounded-lg border-black border-2 shadow-winner pr-8":
+                      activeName === name,
+                  }
+                )}
+                onMouseOver={() => handleSetActiveName(name)}
               >
-                <SGArrowRight />
-              </span>
-            </div>
-          ))}
+                <div className="flex flex-col gap-2">
+                  <p className="text-unknown-200 text-xl font-bold -leading-[0.2px]">
+                    {title}
+                  </p>
+                  <p
+                    className={cn(
+                      "text-dm-l2 group-hover:text-unknown-100 -leading-[0.16px] max-w-[425px]",
+                      {
+                        "text-unknown-100": activeName === name,
+                      }
+                    )}
+                  >
+                    {description}
+                  </p>
+                </div>
+                <span
+                  className={cn("hidden lg:group-hover:inline-block", {
+                    "lg:inline-block": activeName === name,
+                  })}
+                >
+                  <SGArrowRight />
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
-        <div>
+        <div className="max-lg:order-1 flex justify-center">
           <Image
             src={`/images/${activeName}.png`}
             alt={activeName}

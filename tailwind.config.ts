@@ -26,6 +26,8 @@ const config: Config = {
           100: "#320A01",
           200: "#25190E",
         },
+        "yellow-2": "#FFDA44",
+        black: "#020B12",
       },
     },
     container: {

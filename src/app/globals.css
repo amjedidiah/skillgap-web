@@ -16,4 +16,15 @@
     .shadow-winner {
         box-shadow: 8px 8px 0px 0px #000;
     }
+
+
+    .most-played-image-container:nth-child(1) .cover {
+        background: linear-gradient(to left, rgba(255, 218, 68, 0),
+                rgba(255, 218, 68, 1));
+    }
+
+    .most-played-image-container:nth-last-child(2) .cover {
+        background: linear-gradient(to right, rgba(255, 218, 68, 0),
+                rgba(255, 218, 68, 1));
+    }
 }

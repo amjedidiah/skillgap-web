@@ -2,8 +2,9 @@
 import useAppDownloadLink from "@/hooks/use-app-download-link";
 import { isAppLive } from "@/lib/constants";
 import { SGAndroid, SGIos } from "@/lib/icons";
+import { memo } from "react";
 
-export default function LandingDownloadButtons() {
+const LandingDownloadButtons = () => {
   const { handleDownloadApp } = useAppDownloadLink();
   if (!isAppLive) return null;
 
@@ -29,4 +30,6 @@ export default function LandingDownloadButtons() {
       </button>
     </div>
   );
-}
+};
+
+export default memo(LandingDownloadButtons);

@@ -27,7 +27,7 @@ export default function LandingHeaderNav({ isOpen }: Props) {
       className={cn(
         {
           "max-sm:hidden": !isOpen,
-          "max-sm:fixed right-0 left-0 top-[106px] max-sm:bg-white max-sm:py-4 max-sm:px-6 max-sm:flex-col max-sm:items-end max-sm:shadow-md":
+          "max-sm:fixed right-0 left-0 top-[104px] max-sm:bg-white max-sm:py-4 max-sm:px-6 max-sm:flex-col max-sm:items-end max-sm:shadow-md":
             isOpen,
           "sm:absolute sm:right-0 sm:left-0 sm:top-0 sm:bottom-0 pointer-events-none":
             isAppLive,
