@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionHeader from "@/components/shared/section-header";
 
 const mostPlayedContestSubCategories = [
   { name: "clash-royale", src: "/images/most-played/image-7.png" },
@@ -9,15 +10,15 @@ const mostPlayedContestSubCategories = [
   { name: "apex", src: "/images/most-played/image-9.png" },
 ];
 
-export default function MostPlayedContent() {
+export default function MostPlayedContests() {
   return (
     <section className="py-10 lg:pt-14 lg:pb-7 bg-yellow-2 flex flex-col gap-7 lg:gap-10 overflow-hidden">
       <div className="container">
-        <div className="p-5 text-center">
-          <h2 className="text-black text-2xl lg:text-[2rem] font-semibold -tracking-[0.32px]">
-            Most Played Contest
-          </h2>
-        </div>
+        <SectionHeader
+          title="Most Played Contest"
+          className="text-black-100"
+          pad
+        />
       </div>
       <div className="container overflow-x-visible">
         <div className="flex gap-6 items-center py-6 lg:py-[37px] overflow-scroll min-w-[100vw]">

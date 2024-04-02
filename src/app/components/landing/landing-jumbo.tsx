@@ -23,7 +23,7 @@ export default function LandingJumbo() {
               play online or play offline at a mutual venue
             </p>
 
-            <LandingDownloadButtons />
+            <LandingDownloadButtons center />
           </div>
 
           <Image

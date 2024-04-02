@@ -1,104 +1,34 @@
-"use client";
-import { SGArrowRight } from "@/lib/icons";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import { memo, useState } from "react";
-import { useDebouncedCallback } from "use-debounce";
+import SectionHeader from "@/components/shared/section-header";
+import HowItWorksCard from "@/components/landing/how-it-works-card";
 
-const tabs = [
+const howItWorkSteps = [
   {
-    name: "winner",
-    title: "Keep Grinding and Stay Winning",
-    description:
-      "Achieve financial freedom leveraging your skills. Become the best in your region",
+    title: "Download App",
+    content:
+      "Once the app is downloaded on your device you simply register or create an account and fund your account to be able to create contests",
+    hasAction: true,
   },
   {
-    name: "champ",
-    title: "Be A Champ",
-    description: "Find users willing to meet offline & compete",
+    title: "Create or Join Contest",
+    content:
+      "Post a challenge or contest on the arena or send invites privately using your unique skillgap ID then wait for a challenger to accept your contest",
   },
   {
-    name: "we-got-you",
-    title: "We Got You",
-    description:
-      "Your trusted digital boardman for all group or peer to Peer wagers",
-  },
-  {
-    name: "ref",
-    title: "Play Ref and earn",
-    description:
-      "Become a referee and supervise skilltests for massive rewards",
-  },
-  {
-    name: "gain-sk",
-    title: "Gain SK Coins",
-    description:
-      "Avoid disputes on wagers or competitive contests use skillgap today",
+    title: "Win and Withdraw Funds",
+    content:
+      "Compete offline or play online on your preferred consoles or devices, report your score after the contest and receive your winning prize",
   },
 ];
 
-const HowItWorks = () => {
-  const [activeName, setActiveName] = useState("winner");
-
-  const handleSetActiveName = useDebouncedCallback(
-    (name: string) => setActiveName(name),
-    5
-  );
-
+export default function HowItWorks() {
   return (
-    <section id="howItWorks" className="py-10 lg:py-[88px] bg-twitter-blue">
-      <div className="container grid lg:grid-cols-2 gap-6 lg:gap-11 items-center">
-        <div className="max-w-full overflow-scroll py-4">
-          <div className="flex lg:flex-col pt-[18px] pr-9 pb-[13px] pl-6 max-sm:order-2 max-sm:gap-3">
-            {tabs.map(({ title, description, name }) => (
-              <div
-                key={title}
-                className={cn(
-                  "flex max-lg:w-48 flex-shrink-0 gap-12 hover:bg-twitter-blue-100 p-4 hover:rounded-lg hover:border-2 hover:border-black hover:shadow-winner hover:pr-8 cursor-pointer group items-center justify-between",
-                  {
-                    "bg-twitter-blue-100 rounded-lg border-black border-2 shadow-winner pr-8":
-                      activeName === name,
-                  }
-                )}
-                onMouseOver={() => handleSetActiveName(name)}
-              >
-                <div className="flex flex-col gap-2">
-                  <p className="text-unknown-200 text-xl font-bold -leading-[0.2px]">
-                    {title}
-                  </p>
-                  <p
-                    className={cn(
-                      "text-dm-l2 group-hover:text-unknown-100 -leading-[0.16px] max-w-[425px]",
-                      {
-                        "text-unknown-100": activeName === name,
-                      }
-                    )}
-                  >
-                    {description}
-                  </p>
-                </div>
-                <span
-                  className={cn("hidden lg:group-hover:inline-block", {
-                    "lg:inline-block": activeName === name,
-                  })}
-                >
-                  <SGArrowRight />
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="max-lg:order-1 flex justify-center">
-          <Image
-            src={`/images/${activeName}.png`}
-            alt={activeName}
-            width={622}
-            height={610}
-          />
-        </div>
+    <section id="howItWorks" className="py-12 lg:py-14">
+      <div className="flex flex-col container gap-10 lg:gap-12">
+        <SectionHeader title="How It Works" className="text-black" />
+        {howItWorkSteps.map((item, i) => (
+          <HowItWorksCard key={item.title} count={i + 1} {...item} />
+        ))}
       </div>
     </section>
   );
-};
-
-export default memo(HowItWorks);
+}

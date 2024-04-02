@@ -15,6 +15,7 @@ const config: Config = {
         grey: {
           DEFAULT: "#8F8F8F",
           100: "#E6E6E6",
+          200: "#8F8F8F",
           700: "#666B70",
         },
         "lil-dark-blue": {
@@ -25,9 +26,18 @@ const config: Config = {
         unknown: {
           100: "#320A01",
           200: "#25190E",
+          300: "#E5CCFF",
         },
-        "yellow-2": "#FFDA44",
-        black: "#020B12",
+        yellow: { DEFAULT: "#DBBC1C", 2: "#FFDA44" },
+        "light-yellow": "#FFFAE5",
+        black: { DEFAULT: "#000000", 100: "#020B12" },
+        "light-blue": "#E7F4FD",
+        green: {
+          DEFAULT: "#2A9D0D",
+          3: "#E2FEE6",
+        },
+        purple: "#7900FB",
+        "light-purple": "#EFE0FF",
       },
     },
     container: {

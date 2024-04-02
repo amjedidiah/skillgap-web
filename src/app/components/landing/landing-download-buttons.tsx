@@ -2,14 +2,23 @@
 import useAppDownloadLink from "@/hooks/use-app-download-link";
 import { isAppLive } from "@/lib/constants";
 import { SGAndroid, SGIos } from "@/lib/icons";
+import { cn } from "@/lib/utils";
 import { memo } from "react";
 
-const LandingDownloadButtons = () => {
+type Props = {
+  center?: boolean;
+};
+
+const LandingDownloadButtons = ({ center }: Props) => {
   const { handleDownloadApp } = useAppDownloadLink();
   if (!isAppLive) return null;
 
   return (
-    <div className="mt-4 flex flex-wrap gap-6 items-center justify-center">
+    <div
+      className={cn("mt-4 flex flex-wrap gap-6 items-center", {
+        "justify-center": Boolean(center),
+      })}
+    >
       <button
         className="flex items-center py-4 px-6 gap-[10px] rounded-[2rem] border border-lil-dark-blue text-lil-dark-blue -tracking-[0.16px]"
         onClick={() => handleDownloadApp("android")}
