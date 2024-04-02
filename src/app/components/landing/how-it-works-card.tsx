@@ -65,7 +65,7 @@ export default function HowItWorksCard({
             <h5 className="text-black text-xl lg:text-2xl font-semibold -tracking-[0.24px]">
               {title}
             </h5>
-            <p className="text-grey-200 -tracking-[0.16px]">{content}</p>
+            <p className="text-grey -tracking-[0.16px]">{content}</p>
           </div>
         </div>
         {hasAction && <LandingDownloadButtons />}

@@ -5,6 +5,7 @@ import MostPlayedContests from "@/components/landing/most-played-contests";
 import { Fragment } from "react";
 import HowItWorks from "@/components/landing/how-it-works";
 import FAQs from "@/components/landing/faqs";
+import LandingFooter from "@/components/landing/landing-footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <HowItWorks />
         <FAQs />
       </main>
+      <LandingFooter />
     </Fragment>
   );
 }

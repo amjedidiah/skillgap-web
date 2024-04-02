@@ -15,9 +15,12 @@ const LandingDownloadButtons = ({ center }: Props) => {
 
   return (
     <div
-      className={cn("mt-4 flex flex-wrap gap-6 items-center", {
-        "justify-center": Boolean(center),
-      })}
+      className={cn(
+        "mt-4 flex flex-wrap gap-6 items-center [&_button]:w-[144px] [&_button]:justify-center",
+        {
+          "justify-center": Boolean(center),
+        }
+      )}
     >
       <button
         className="flex items-center py-4 px-6 gap-[10px] rounded-[2rem] border border-lil-dark-blue text-lil-dark-blue -tracking-[0.16px]"

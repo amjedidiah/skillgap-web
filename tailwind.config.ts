@@ -15,9 +15,9 @@ const config: Config = {
         grey: {
           DEFAULT: "#8F8F8F",
           100: "#E6E6E6",
-          200: "#8F8F8F",
           700: "#666B70",
         },
+        "light-grey": "#D0D5DD",
         "lil-dark-blue": {
           DEFAULT: "#0E80CE",
           100: "#F1F9FE",

@@ -1,6 +1,6 @@
 import { isAppLive } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { Link } from "react-scroll";
+import ScrollLink from "@/components/shared/scroll-link";
 
 const navLinks = [
   {
@@ -37,16 +37,13 @@ export default function LandingHeaderNav({ isOpen }: Props) {
     >
       {navLinks.map(({ title, href }) => (
         <li key={title}>
-          <Link
+          <ScrollLink
             to={href}
-            className="-tracking-[0.16px] text-grey cursor-pointer pointer-events-auto"
+            className="-tracking-[0.16px] text-grey pointer-events-auto"
             activeClass="text-lil-dark-blue"
-            smooth
-            spy
-            offset={-104}
           >
             {title}
-          </Link>
+          </ScrollLink>
         </li>
       ))}
     </ul>

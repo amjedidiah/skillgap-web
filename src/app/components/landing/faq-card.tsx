@@ -21,11 +21,14 @@ export default function FAQCard({
 
   return (
     <div
-      className={cn("flex flex-col gap-[9px] lg:w-[976px]", {
-        "p-4 pr-6 bg-light-purple": !isActiveFAQ,
-        "pl-[17px] py-[18px] pr-[27px] border-black border-4 bg-purple shadow-faq-active":
-          isActiveFAQ,
-      })}
+      className={cn(
+        "flex flex-col gap-[9px] w-full sm:w-5/6 md:w-4/5 max-w-[976px]",
+        {
+          "p-4 pr-6 bg-light-purple": !isActiveFAQ,
+          "pl-[17px] py-[18px] pr-[27px] border-black border-4 bg-purple shadow-faq-active":
+            isActiveFAQ,
+        }
+      )}
     >
       <div className="flex items-center justify-between">
         <div className="flex gap-4 items-center">
@@ -35,7 +38,7 @@ export default function FAQCard({
             </span>
           )}
           <p
-            className={cn("text-xl font-semibold", {
+            className={cn("text-lg lg:text-xl font-semibold", {
               "text-black-100": !isActiveFAQ,
               "text-white": isActiveFAQ,
             })}

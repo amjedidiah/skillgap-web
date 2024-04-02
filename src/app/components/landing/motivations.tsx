@@ -63,7 +63,7 @@ const Motivations = () => {
                 onMouseOver={() => handleSetActiveName(name)}
               >
                 <div className="flex flex-col gap-2">
-                  <p className="text-unknown-200 text-xl font-bold -leading-[0.2px]">
+                  <p className="text-unknown-200 text-lg lg:text-xl font-bold -leading-[0.2px]">
                     {title}
                   </p>
                   <p
@@ -94,7 +94,7 @@ const Motivations = () => {
             alt={activeName}
             width={622}
             height={610}
-            className="max-lg:max-w-[450px] mx-auto"
+            className="max-lg:w-4/5 max-lg:max-w-[450px] mx-auto"
           />
         </div>
       </div>

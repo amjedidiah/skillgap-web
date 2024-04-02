@@ -3,7 +3,7 @@ import { SGLogo } from "@/lib/icons";
 import LandingHeaderNav from "@/components/landing/landing-header-nav";
 import { RiMenu3Line } from "react-icons/ri";
 import { memo, useCallback, useState } from "react";
-import { Link } from "react-scroll";
+import ScrollLink from "@/components/shared/scroll-link";
 import { cn } from "@/lib/utils";
 import useAppDownloadLink from "@/hooks/use-app-download-link";
 import { isAppLive } from "@/lib/constants";
@@ -17,9 +17,9 @@ const LandingHeader = () => {
     <header className="fixed left-0 top-0 w-full z-10 bg-white border-b border-grey-100">
       <div className="container">
         <div className="flex justify-between items-center py-6 gap-6 sm:gap-8 relative h-[103px]">
-          <Link to="home" smooth offset={-104} className="cursor-pointer">
+          <ScrollLink to="home">
             <SGLogo />
-          </Link>
+          </ScrollLink>
           <LandingHeaderNav isOpen={isMenuOpen} />
           <button
             className={cn(
