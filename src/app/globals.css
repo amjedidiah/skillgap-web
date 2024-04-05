@@ -16,8 +16,12 @@
 }
 
 @layer base {
+    html {
+        @apply h-full;
+    }
+
     body {
-        @apply font-medium bg-zinc-50;
+        @apply font-medium bg-zinc-50 h-full flex flex-col;
     }
 }
 

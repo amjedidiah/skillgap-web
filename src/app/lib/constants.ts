@@ -15,3 +15,4 @@ export const socialMediaLinks = [
     href: "https://instagram.com/skillgap.co",
   },
 ];
+

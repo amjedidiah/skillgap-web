@@ -44,7 +44,7 @@ export default function LandingJumbo() {
         />
         <Image
           src="/images/jumbo-blur-right.png"
-          width={491}
+          width={542}
           height={676}
           alt="jumbo-blur-right"
         />

@@ -1,19 +1,24 @@
 import { isAppLive } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import ScrollLink from "@/components/shared/scroll-link";
+import CustomLink from "@/components/shared/custom-link";
 
 const navLinks = [
   {
-    title: "Home",
+    label: "Home",
     href: "home",
   },
   {
-    title: "How it works",
+    label: "How it works",
     href: "howItWorks",
   },
   {
-    title: "FAQs",
+    label: "FAQs",
     href: "faqs",
+  },
+  {
+    label: "Policy",
+    href: "/policy",
+    isSamePage: false,
   },
 ];
 
@@ -35,14 +40,12 @@ export default function LandingHeaderNav({ isOpen }: Props) {
         "flex items-center justify-center gap-4 lg:gap-8"
       )}
     >
-      {navLinks.map(({ title, href }) => (
-        <li key={title}>
-          <ScrollLink
-            to={href}
-            className="-tracking-[0.16px] text-grey pointer-events-auto"
-          >
-            {title}
-          </ScrollLink>
+      {navLinks.map((item) => (
+        <li
+          key={item.href}
+          className="-tracking-[0.16px] text-grey pointer-events-auto"
+        >
+          <CustomLink {...item} />
         </li>
       ))}
     </ul>

@@ -19,11 +19,11 @@ export default function MostPlayedContestsSlider() {
       speed={100}
       gradient
       gradientColor="rgba(255,218,68,1)"
-      className="py-6 lg:py-[37px] overflow-scroll min-w-[100vw]"
+      className="my-6 lg:my-[37px] overflow-scroll min-w-[100vw]"
     >
-      {mostPlayedContestSubCategories.map(({ name, src }) => (
+      {mostPlayedContestSubCategories.map(({ name, src }, i) => (
         <Image
-          key={name}
+          key={`${name}-${i}`}
           src={src}
           alt={name}
           width={382}
