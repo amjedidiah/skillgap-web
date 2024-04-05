@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes tempbounce {
+    0%,
+    100% {
+        transform: translateY(-5%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
 @layer base {
     body {
         @apply font-medium bg-zinc-50;
@@ -17,17 +30,15 @@
         box-shadow: 8px 8px 0px 0px #000;
     }
 
-    .most-played-image-container:nth-child(1) .cover {
-        background: linear-gradient(to left, rgba(255, 218, 68, 0),
-                rgba(255, 218, 68, 1));
-    }
-
-    .most-played-image-container:nth-last-child(2) .cover {
-        background: linear-gradient(to right, rgba(255, 218, 68, 0),
-                rgba(255, 218, 68, 1));
-    }
-
     .shadow-faq-active {
         box-shadow: 8px 8px 4px 0px #000000;
+    }
+
+    .jumbo-bounce {
+        animation-name: tempbounce;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: 10;
+        animation-iteration-count: 10;
     }
 }

@@ -1,14 +1,5 @@
-import Image from "next/image";
 import SectionHeader from "@/components/shared/section-header";
-
-const mostPlayedContestSubCategories = [
-  { name: "clash-royale", src: "/images/most-played/image-7.png" },
-  { name: "fortnite", src: "/images/most-played/image-8.png" },
-  { name: "apex", src: "/images/most-played/image-9.png" },
-  { name: "clash-royale", src: "/images/most-played/image-7.png" },
-  { name: "fortnite", src: "/images/most-played/image-8.png" },
-  { name: "apex", src: "/images/most-played/image-9.png" },
-];
+import MostPlayedContestsSlider from "@/components/landing/most-played-contests-slider";
 
 export default function MostPlayedContests() {
   return (
@@ -21,18 +12,7 @@ export default function MostPlayedContests() {
         />
       </div>
       <div className="container overflow-x-visible">
-        <div className="flex gap-6 items-center py-6 lg:py-[37px] overflow-scroll min-w-[100vw]">
-          {mostPlayedContestSubCategories.map(({ name, src }) => (
-            <div
-              className="most-played-image-container flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-[382px] shadow-lg relative"
-              key={name}
-            >
-              <div className="cover absolute w-full h-full" />
-              <Image src={src} alt={name} width={382} height={390} />
-            </div>
-          ))}
-          <div className="flex-shrink-0 basis-1/6 2xl:basis-1/2 h-20" />
-        </div>
+        <MostPlayedContestsSlider />
       </div>
     </section>
   );

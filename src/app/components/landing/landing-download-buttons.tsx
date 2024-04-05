@@ -4,6 +4,7 @@ import { isAppLive } from "@/lib/constants";
 import { SGAndroid, SGIos } from "@/lib/icons";
 import { cn } from "@/lib/utils";
 import { memo } from "react";
+import AppIsComingSoon from "@/components/shared/app-is-coming-soon";
 
 type Props = {
   center?: boolean;
@@ -11,7 +12,7 @@ type Props = {
 
 const LandingDownloadButtons = ({ center }: Props) => {
   const { handleDownloadApp } = useAppDownloadLink();
-  if (!isAppLive) return null;
+  if (!isAppLive) return <AppIsComingSoon center={center} />;
 
   return (
     <div

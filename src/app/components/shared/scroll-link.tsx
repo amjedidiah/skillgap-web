@@ -15,6 +15,7 @@ const ScrollLink = ({
       spy
       offset={-104}
       className={cn("cursor-pointer", className)}
+      activeClass="text-lil-dark-blue"
       {...rest}
     >
       {children}

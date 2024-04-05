@@ -31,7 +31,7 @@ export default function LandingJumbo() {
             alt="landing-jumbo"
             width={900}
             height={387}
-            className="lg:scale-110"
+            className="lg:scale-110 jumbo-bounce hover:jumbo-bounce"
           />
         </div>
       </article>

@@ -40,7 +40,6 @@ export default function LandingHeaderNav({ isOpen }: Props) {
           <ScrollLink
             to={href}
             className="-tracking-[0.16px] text-grey pointer-events-auto"
-            activeClass="text-lil-dark-blue"
           >
             {title}
           </ScrollLink>

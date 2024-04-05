@@ -1,5 +1,5 @@
 "use client";
-import { SGLogo } from "@/lib/icons";
+import Image from "next/image";
 import LandingHeaderNav from "@/components/landing/landing-header-nav";
 import { RiMenu3Line } from "react-icons/ri";
 import { memo, useCallback, useState } from "react";
@@ -18,7 +18,13 @@ const LandingHeader = () => {
       <div className="container">
         <div className="flex justify-between items-center py-6 gap-6 sm:gap-8 relative h-[103px]">
           <ScrollLink to="home">
-            <SGLogo />
+            <Image
+              src="/images/logo.png"
+              alt="logo"
+              width={52}
+              height={52}
+              className="rounded-lg"
+            />
           </ScrollLink>
           <LandingHeaderNav isOpen={isMenuOpen} />
           <button
