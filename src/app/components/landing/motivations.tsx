@@ -2,8 +2,7 @@
 import { SGArrowRight } from "@/lib/icons";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { memo, useState } from "react";
-import { useDebouncedCallback } from "use-debounce";
+import { memo, useCallback, useState } from "react";
 
 const tabs = [
   {
@@ -40,9 +39,9 @@ const tabs = [
 const Motivations = () => {
   const [activeName, setActiveName] = useState("winner");
 
-  const handleSetActiveName = useDebouncedCallback(
+  const handleSetActiveName = useCallback(
     (name: string) => setActiveName(name),
-    5
+    []
   );
 
   return (
@@ -61,6 +60,7 @@ const Motivations = () => {
                   }
                 )}
                 onMouseOver={() => handleSetActiveName(name)}
+                onClick={() => handleSetActiveName(name)}
               >
                 <div className="flex flex-col gap-2">
                   <p className="text-unknown-200 text-lg lg:text-xl font-bold -leading-[0.2px]">
