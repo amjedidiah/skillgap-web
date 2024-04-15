@@ -39,3 +39,6 @@ certificates
 
 # Lock file
 yarn.lock
+
+# Custom
+TODO.md
