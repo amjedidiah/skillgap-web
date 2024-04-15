@@ -128,7 +128,7 @@ export default function LandingFooter() {
               <div className="flex gap-4 lg:gap-6 xl:gap-8 items-center">
                 {socialMediaLinks.map(({ Icon, name, href }) => (
                   <span key={name}>
-                    <a href={href} className="text-2xl">
+                    <a href={href} className="text-2xl" target="_blank">
                       <span className="hidden">{name}</span>
                       <Icon />
                     </a>
