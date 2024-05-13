@@ -35,9 +35,10 @@ export default function HowItWorksCard({
   const imageSrc = useMemo(
     () =>
       ({
-        1: "/images/how-it-works/download-app.png",
-        2: "/images/how-it-works/create-join-contest.png",
-      }[count] || "/images/how-it-works/win-and-withdraw.png"),
+        1: "https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622253/download-app_y1l9e4.png",
+        2: "https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622234/create-join-contest_ztnz7j.png",
+      }[count] ||
+      "https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622239/win-and-withdraw_v0ayue.png"),
     [count]
   );
 

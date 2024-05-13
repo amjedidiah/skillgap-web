@@ -2,7 +2,7 @@
 import { SGArrowRight } from "@/lib/icons";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { memo, useCallback, useState } from "react";
+import { memo, useCallback, useMemo, useState } from "react";
 
 const tabs = [
   {
@@ -42,6 +42,22 @@ const Motivations = () => {
   const handleSetActiveName = useCallback(
     (name: string) => setActiveName(name),
     []
+  );
+
+  const activeImage = useMemo(
+    () =>
+      ({
+        "we-got-you":
+          "https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622199/we-got-you_fnj5xk.png",
+        "gain-sk":
+          "https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622198/gain-sk_hw2p60.png",
+        champ:
+          "https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622195/champ_gdemwy.png",
+        ref: "https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622194/ref_mniq6m.png",
+        winner:
+          "https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622189/winner_lbczej.png",
+      }[activeName] || ""),
+    [activeName]
   );
 
   return (
@@ -90,7 +106,7 @@ const Motivations = () => {
         </div>
         <div className="max-lg:order-1 flex justify-center">
           <Image
-            src={`/images/${activeName}.png`}
+            src={activeImage}
             alt={activeName}
             width={622}
             height={610}

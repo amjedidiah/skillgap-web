@@ -78,7 +78,7 @@ export default function LandingFooter() {
       >
         <ScrollLink to="home">
           <Image
-            src="/images/logo.png"
+            src="https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622187/logo_bnqezc.png"
             alt="logo"
             width={50}
             height={50}
@@ -109,14 +109,14 @@ export default function LandingFooter() {
             {isAppLive && (
               <div className="flex flex-col sm:max-lg:flex-row-reverse sm:flex-1 gap-3">
                 <Image
-                  src="/images/app-store-download.png"
+                  src="https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622183/app-store-download_k9qctu.png"
                   alt="App Store download"
                   width={207}
                   height={70}
                   className="max-lg:w-48"
                 />
                 <Image
-                  src="/images/play-store-download.png"
+                  src="https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622183/play-store-download_wonrlr.png"
                   alt="Play store download"
                   width={207}
                   height={70}
