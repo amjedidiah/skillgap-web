@@ -27,6 +27,7 @@ const config: Config = {
           100: "#320A01",
           200: "#25190E",
           300: "#E5CCFF",
+          400: "#F5FBFE",
         },
         yellow: { DEFAULT: "#DBBC1C", 2: "#FFDA44" },
         "light-yellow": "#FFFAE5",
