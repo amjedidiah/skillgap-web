@@ -19,7 +19,7 @@ const PolicyHeader = () => {
             className="inline-flex gap-1 md:flex-1 items-center"
           >
             <Image
-              src="/images/logo.png"
+              src="https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622187/logo_bnqezc.png"
               alt="logo"
               width={50}
               height={50}

@@ -16,7 +16,7 @@ const LandingHeader = () => {
         <div className="flex justify-between items-center py-6 gap-6 sm:gap-8 relative h-[103px]">
           <ScrollLink to="home">
             <Image
-              src="/images/logo.png"
+              src="https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622187/logo_bnqezc.png"
               alt="logo"
               width={50}
               height={50}

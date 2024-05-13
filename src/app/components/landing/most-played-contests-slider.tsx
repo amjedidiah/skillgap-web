@@ -2,12 +2,30 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 const mostPlayedContestSubCategories = [
-  { name: "clash-royale", src: "/images/most-played/image-7.png" },
-  { name: "fortnite", src: "/images/most-played/image-8.png" },
-  { name: "apex", src: "/images/most-played/image-9.png" },
-  { name: "clash-royale", src: "/images/most-played/image-7.png" },
-  { name: "fortnite", src: "/images/most-played/image-8.png" },
-  { name: "apex", src: "/images/most-played/image-9.png" },
+  {
+    name: "clash-royale",
+    src: "https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622261/image-7_ehjetk.png",
+  },
+  {
+    name: "fortnite",
+    src: "https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622263/image-8_lrmnim.png",
+  },
+  {
+    name: "apex",
+    src: "https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622265/image-9_jvpwyq.png",
+  },
+  {
+    name: "clash-royale",
+    src: "https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622261/image-7_ehjetk.png",
+  },
+  {
+    name: "fortnite",
+    src: "https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622263/image-8_lrmnim.png",
+  },
+  {
+    name: "apex",
+    src: "https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622265/image-9_jvpwyq.png",
+  },
 ];
 
 export default function MostPlayedContestsSlider() {

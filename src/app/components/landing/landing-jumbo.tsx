@@ -27,7 +27,7 @@ export default function LandingJumbo() {
           </div>
 
           <Image
-            src="/images/landing-jumbo.png"
+            src="https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622209/landing-jumbo_aqfjrq.png"
             alt="landing-jumbo"
             width={900}
             height={387}
@@ -37,13 +37,13 @@ export default function LandingJumbo() {
       </article>
       <div className="absolute left-0 w-full overflow-x-hidden h-full top-0 flex items-center justify-between pointer-events-none">
         <Image
-          src="/images/jumbo-blur-left.png"
+          src="https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622201/jumbo-blur-left_mqacis.png"
           width={491}
           height={676}
           alt="jumbo-blur-left"
         />
         <Image
-          src="/images/jumbo-blur-right.png"
+          src="https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622194/jumbo-blur-right_sqr2os.png"
           width={542}
           height={676}
           alt="jumbo-blur-right"
