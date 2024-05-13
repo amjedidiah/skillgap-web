@@ -33,7 +33,7 @@ function DashboardNavAside() {
     >
       <Link href={dashboardRootPath}>
         <Image
-          src="/images/logo.png"
+          src="https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622187/logo_bnqezc.png"
           alt="logo"
           width={56}
           height={56}

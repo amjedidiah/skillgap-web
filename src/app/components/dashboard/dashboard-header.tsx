@@ -25,7 +25,7 @@ function DashboardHeader() {
     <header className="flex items-center gap-4 sm:gap-6 justify-between h-14 w-full">
       <Link href={dashboardRootPath} className="md:hidden">
         <Image
-          src="/images/logo.png"
+          src="https://res.cloudinary.com/dv3jszmrc/image/upload/v1715622187/logo_bnqezc.png"
           alt="logo"
           width={48}
           height={48}
