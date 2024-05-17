@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { memo, useMemo } from "react";
 import DashboardHeaderForm from "@/components/dashboard/dashboard-header-form";
+import NotificationCard from "@/components/dashboard/notification-card";
 import AdminUserCard from "@/components/dashboard/admin-user-card";
 import { dashboardNavItems } from "@/components/dashboard/dashboard-nav";
 import Image from "next/image";
@@ -46,7 +47,10 @@ function DashboardHeader() {
         </div>
       )}
       <DashboardHeaderForm />
-      <AdminUserCard showName />
+      <div className="flex space-x-[24px]">
+        <NotificationCard />
+        <AdminUserCard showName />
+      </div>
     </header>
   );
 }
