@@ -3,17 +3,17 @@ import Image from "next/image"
 function LeaderboardItem({style}) {
     // style = "green-300"
     return (
-        <div className={`flex space-x-[21px] py-[10px] mr-[36px] bg-${style} pr-[24px]`}>
+        <div className={`flex space-x-[24px] py-[10px] mr-[36px] bg-${style} pr-[24px]`}>
             <div className="">
                 <Image 
                     src="/images/elements26.png"
-                    width={32}
-                    height={32}
+                    width={40}
+                    height={40}
                     alt=""
                     className=""
                 />
             </div>
-            <div className="flex w-[100%] text-[14px] pl-[24px]">
+            <div className="flex w-[100%] text-[14px]">
                 <div className="flex justify-center items-center">
                     Agnes Fortune
                 </div>
@@ -42,7 +42,7 @@ export default function Leaderboard() {
                     (This week)
                 </div>
             </div>
-            <div className="overflow-y-scroll h-[86%]">
+            <div className=" cardScroll overflow-y-scroll h-[86%]">
                 <div>
                     {items.map((item, key) => 
                         <LeaderboardItem style={key % 2 === 0 ? '[#F7F7F7]' : 'white' }/>

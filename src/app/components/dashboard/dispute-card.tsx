@@ -4,7 +4,7 @@ function DisputeCarditem() {
     // style = "green-300"
     return (
         <tr>
-            <div className="flex w-[100%] text-[14px] pl-[24px] text-[#8F8F8F]">
+            <div className="flex w-[100%] text-[14px] pl-[24px] text-[#8F8F8F] py-[10px]">
                 <td>
                     <div className="flex justify-center items-center pr-[136px]">
                         CODM
@@ -44,7 +44,7 @@ export default function DisputeCard() {
                     (This week)
                 </div>
             </div>
-            <div className="overflow-y-scroll overflow-x-scroll h-[70%]">
+            <div className="cardScroll overflow-y-scroll overflow-x-scroll h-[85%]">
                 <div className="w-[800px]">
                     <table>
                         {items.map((item, key) => 

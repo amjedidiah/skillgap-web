@@ -45,4 +45,8 @@
         -webkit-animation-iteration-count: 10;
         animation-iteration-count: 10;
     }
+
+    .cardScroll::-webkit-scrollbar {
+        display: none;
+    }
 }
