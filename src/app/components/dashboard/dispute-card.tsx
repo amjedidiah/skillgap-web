@@ -35,7 +35,7 @@ export default function DisputeCard() {
     const items = [1,2,3,4,5,6,7,8,9,10,11]
 
     return (
-        <div className="bg-white h-[463px] w-[593px] rounded-[8px] pl-[36px] pt-[20px]">
+        <div className="bg-white h-[463px] w-[50%] rounded-[8px] pl-[36px] pt-[20px] pr-[24px]">
             <div className="flex space-x-[10px] justify-center items-center w-fit py-[10px]">
                 <div className="text-[20px]">
                     Dispute
@@ -44,8 +44,8 @@ export default function DisputeCard() {
                     (This week)
                 </div>
             </div>
-            <div className="cardScroll overflow-y-scroll overflow-x-scroll h-[85%]">
-                <div className="w-[800px]">
+            <div className="cardScroll overflow-y-scroll overflow-x-scroll h-[85%] ">
+                <div className="w-[800px] ">
                     <table>
                         {items.map((item, key) => 
                             <DisputeCarditem />
