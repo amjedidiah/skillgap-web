@@ -1,6 +1,6 @@
 export default function MapCard() {
     return (
-        <div className="h-[463px] grow rounded-[8px] bg-white">
+        <div className="h-[479px] rounded-[8px] w-[55%] bg-white">
 
         </div>
     )

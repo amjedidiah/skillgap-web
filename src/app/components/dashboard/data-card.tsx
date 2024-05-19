@@ -41,11 +41,13 @@ export default function Datacard() {
                     <div className="font-[500px] text-[24px]">
                         33,445
                     </div>
-                    <div>
+                    <div className="">
                         <Image
                             src="/images/elements24.svg"
                             width={67.871}
                             height={40.959}
+                            // width={85}
+                            // height={75}
                             alt=""
                             className="" 
                         />
