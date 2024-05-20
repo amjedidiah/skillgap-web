@@ -1,8 +1,54 @@
+"use client"
+
 import Image from "next/image";
+import { Bar } from 'react-chartjs-2';
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
+} from "chart.js"
+
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
+);
+
+
+const data = {
+    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', "Sun"],
+    datasets: [
+    {
+        label: 'dataset',
+        data: [30000, 12000, 21000, 30000, 8500, 10000, 26000],
+        backgroundColor: '#1D9BF0',
+        borderColor: '#1D9BF0',
+        borderWidth: 1,
+    },
+    ],
+};
+
+const options = {
+    // Your chart configuration options here
+    borderRadius: 4,
+};
+
+function BarChart() {
+    return (
+        <Bar options={options} data={data} />
+    )
+}
 
 export default function ExportCard() {
     return (
-        <div className="bg-white h-[463px] w-[45%] rounded-[8px] p-[36px]">
+        <div className="bg-white h-[463px] w-[45%] rounded-[8px] p-[36px] space-y-[36px]">
             <div className="items-end flex">
                 <div className="space-y-[13px]">
                     <div>
@@ -90,8 +136,8 @@ export default function ExportCard() {
                     </div>
                 </div>
             </div>
-            <div>
-
+            <div className="">
+                <BarChart />
             </div>
         </div>
     )
