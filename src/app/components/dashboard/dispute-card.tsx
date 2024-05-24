@@ -34,29 +34,7 @@ export default function DisputeCard() {
             </div>
         </div>
         <div className='cardScroll h-[84%] w-[97%] overflow-y-scroll overflow-x-scroll '>
-            <div className=''>
-                <table>
-                    <thead className='bg-[#F0F0F0]'>
-                        <tr className='text-[14px]'>
-                            {columns.map((column) => (
-                                <th key={column}className='pr-[36px] py-[10px]'>{column}</th>
-                            ))}
-                        </tr>
-                    </thead>
-                    <tbody className=''>
-                        {data.map((item, index) => (
-                            <tr key={index} className='text-[12px] text-[#8F8F8F]'>
-                                {Object.keys(item).map((key) => (
-                                    <td key={key} className='pr-[36px] py-[10px]'>
-                                        {item[key]}
-                                        <hr>
-                                        </hr>
-                                    </td>
-                                ))}
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+ 
             </div>
         </div>
     </div>

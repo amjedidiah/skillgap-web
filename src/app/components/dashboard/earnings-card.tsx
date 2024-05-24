@@ -65,7 +65,7 @@ export default function EarningsCard() {
                     </div>
                     <div 
                         className="flex items-center bg-[#F5F5F5] border-[#E6E6E6] border-solid border-[1px] 
-                        w-fit text-[#8F8F8F] text-[12px] py-[8px] space-x-[10px] px-[13px] rounded-[4px]">
+                        w-fit text-[#8F8F8F] text-[12px] py-[4px] space-x-[10px] px-[4px] rounded-[4px]">
                         <div className="rounded-[4px] bg-white pt-[3.55px] pl-[4.25px] pr-[3.75px] pb-[4.45px] text-nowrap">
                             SK Coin
                         </div>
