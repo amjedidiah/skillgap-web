@@ -39,7 +39,8 @@ const options = {
     borderRadius: 4,
     layout: {
         padding: {
-            // bottom: 80,
+            bottom: 80,
+            //comment out for edge browser: ...
         }
     }
 };

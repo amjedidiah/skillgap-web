@@ -46,7 +46,7 @@ export default function MapCard() {
                         </div>
                     </div>
                 </div>
-                <div className="">
+                <div className="flex justify-center mr-4">
                     <div>
                         <Image
                             src="/images/worldColor.svg"
