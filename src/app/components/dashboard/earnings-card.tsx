@@ -36,7 +36,6 @@ const data = {
 };
 
 const options = {
-    // Your chart configuration options here
     borderRadius: 4,
 };
 
@@ -46,7 +45,7 @@ function BarChart() {
     )
 }
 
-export default function ExportCard() {
+export default function EarningsCard() {
     return (
         <div className="bg-white h-[463px] w-[45%] rounded-[8px] p-[36px] space-y-[36px]">
             <div className="items-end flex">
@@ -79,8 +78,8 @@ export default function ExportCard() {
                 </div>
                 <div className="bg-blue-600 grow">
                 </div>
-                <div className="space-y-[10px]">
-                    <div className="flex items-end ">
+                <div className="space-y-[10px] grid justify-items-end">
+                    <div className="flex items-end w-fit">
                         <div className="text-[12px] text-[#8F8F8F] pb-[3px]">
                             SK
                         </div>
@@ -89,7 +88,7 @@ export default function ExportCard() {
                         </div>
                     </div>
                     <div 
-                        className="flex text-[#8F8F8F] p-[8px] 
+                        className="flex text-[12px] text-[#8F8F8F] p-[8px] 
                         border-solid border-[1px] border-[#E6E6E6] rounded-[4px]">
                         <div className="flex">
                             <div>
@@ -99,8 +98,8 @@ export default function ExportCard() {
                                 <Image 
                                     src="/images/elements33.svg"
                                     alt=""
-                                    width={18}
-                                    height={18}
+                                    width={14}
+                                    height={14}
                                     className=""
                                 />
                             </div>
@@ -113,8 +112,8 @@ export default function ExportCard() {
                                 <Image 
                                     src="/images/elements33.svg"
                                     alt=""
-                                    width={18}
-                                    height={18}
+                                    width={14}
+                                    height={14}
                                     className=""
                                 />
                             </div>
@@ -127,8 +126,8 @@ export default function ExportCard() {
                                 <Image 
                                     src="/images/elements33.svg"
                                     alt=""
-                                    width={18}
-                                    height={18}
+                                    width={14}
+                                    height={14}
                                     className=""
                                 />
                             </div>

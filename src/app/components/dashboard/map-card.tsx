@@ -29,7 +29,7 @@ export default function MapCard() {
                     </div>
                     <div className="flex">
                         <div 
-                            className="flex py-[4px] px-[8px] 
+                            className="flex py-[4px] px-[4px] 
                             border-solid border-[#E6E6E6] border-[1px] rounded-[4px]">
                             <div className="text-[12px] text-[#8F8F8F]">
                                 Weekly
@@ -38,8 +38,8 @@ export default function MapCard() {
                                 <Image 
                                     src="/images/elements33.svg"
                                     alt=""
-                                    width={18}
-                                    height={18}
+                                    width={14}
+                                    height={14}
                                     className=""
                                 />
                             </div>

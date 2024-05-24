@@ -47,7 +47,7 @@ export default function DisputeCard() {
                         {data.map((item, index) => (
                             <tr key={index} className='text-[12px] text-[#8F8F8F]'>
                                 {Object.keys(item).map((key) => (
-                                    <td key={key} className='pr-[36px] py-[10px]'>
+                                    <td key={key} className='pr-[36px] pb-[14px] pt-[20px]'>
                                         {item[key]}
                                         <hr>
                                         </hr>

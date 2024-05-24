@@ -1,9 +1,9 @@
 import DashboardHeader from "@/components/dashboard/dashboard-header";
 import DashboardNavAside from "@/components/dashboard/dashboard-nav-aside";
-import DashboardBody from "@/components/dashboard/dasshboard-body";
+import DashboardBody from "@/components/dashboard/dashboard-body";
 import Datacard from "@/components/dashboard/data-card";
 import DisputeCard from "@/components/dashboard/dispute-card";
-import ExportCard from "@/components/dashboard/earnings-card";
+import EarningsCard from "@/components/dashboard/earnings-card";
 import Leaderboard from "@/components/dashboard/leader-board-card";
 import MapCard from "@/components/dashboard/map-card";
 import { PropsWithChildren } from "react";
@@ -28,7 +28,7 @@ export default function DashboardLayout({ children }: PropsWithChildren) {
             </div>
             <div className="flex space-x-[24px]">
               <DisputeCard />
-              <ExportCard />
+              <EarningsCard />
             </div>
           </div>
           {children}

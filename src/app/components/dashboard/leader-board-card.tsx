@@ -1,27 +1,52 @@
+import { SGSKCoin } from "@/lib/icons"
 import Image from "next/image"
 
-function LeaderboardItem({style}) {
+function LeaderboardItem({styleI, key}) {
     // style = "green-300"
     return (
-        <div className={`flex space-x-[24px] py-[10px] mr-[36px] bg-${style}`}>
-            <div className="">
-                <Image 
-                    src="/images/elements26.png"
-                    width={40}
-                    height={40}
-                    alt=""
-                    className=""
-                />
+        <div className={`flex space-x-[24px] py-[10px] mr-[36px] bg-${styleI} items-center`}>
+            <div className="flex space-x-[16px] items-center">
+                <div 
+                    style = {
+                        {
+                            backgroundImage : `url(${"/images/pngyellow.png"})`,
+                            backgroundPosition: "center",
+                            backgroundSize: "contain",
+                            backgroundRepeat: "no-repeat",
+                            width: "24px",
+                            height: "24px"
+                        }
+                    }
+                    className="flex justify-center items-center"
+                    >
+                        <div className="text-[#E7F4FD] text-[10px]">
+                            {key}2
+                        </div>
+                </div>
+                <div className="">
+                    <Image 
+                        src="/images/elements26.png"
+                        width={40}
+                        height={40}
+                        alt=""
+                        className=""
+                    />
+                </div>
             </div>
-            <div className="flex w-[100%] text-[14px]">
+            <div className="flex w-[100%] text-[14px] items-center">
                 <div className="flex justify-center items-center">
                     Agnes Fortune
                 </div>
                 <div className="flex grow">
 
                 </div>
-                <div className="text-[16px] text-[#8F8F8F]">
-                    5000
+                <div className="flex space-x-[4.4px]">
+                    <div>
+                        <SGSKCoin />
+                    </div>
+                    <div className="text-[16px] text-[#8F8F8F]">
+                        5000
+                    </div>
                 </div>
             </div>
         </div>
@@ -45,7 +70,9 @@ export default function Leaderboard() {
             <div className=" cardScroll overflow-y-scroll h-[82%]">
                 <div>
                     {items.map((item, key) => 
-                        <LeaderboardItem style={key % 2 === 0 ? '[#F7F7F7]' : 'white' }/>
+                        // <LeaderboardItem style={key % 2 === 0 ? '[#F7F7F7]' : 'white' }/>
+                        <LeaderboardItem index={key}/>
+
                     )}
                 </div>
             </div>
