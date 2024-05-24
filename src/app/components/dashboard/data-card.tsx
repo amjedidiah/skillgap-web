@@ -1,6 +1,11 @@
 import Image from "next/image";
 
-export default function Datacard() {
+type Props = {
+    item: string;
+    icon: string;
+}
+
+function DataCardItem({item, icon} : Props) {
     return (
         <div className="flex-1 bg-white rounded-[8px] h-[173px] p-[24px]">
             <div className="flex">
@@ -9,7 +14,7 @@ export default function Datacard() {
                         className="bg-[#F5F5F5] w-[44px] h-[44px] 
                         flex justify-center items-center rounded-full">
                         <Image 
-                            src="/images/elements23.svg"
+                            src={icon}
                             width={20}
                             height={19}
                             alt=""
@@ -25,7 +30,7 @@ export default function Datacard() {
                                 Total
                             </div>
                             <div className="text-[16px]">
-                                Dispute
+                                {item}
                             </div>
                         </div>
                         <div 
@@ -54,6 +59,16 @@ export default function Datacard() {
                     </div>
                 </div>
             </div>
+        </div>
+    )
+}
+
+export default function DataCard() {
+    return (
+        <div className="flex w-[100%] space-x-[24px]">
+            <DataCardItem item={"Dispute"} icon={"/images/elements23.svg"}/>
+            <DataCardItem item={"Players"} icon={"images/elements21.svg"}/>
+            <DataCardItem item={"Referee"} icon={"/images/elements22.svg"}/>
         </div>
     )
 }

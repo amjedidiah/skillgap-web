@@ -33,7 +33,7 @@ export default function DashboardBody() {
             <div className="text-[#E7F4FD] text-[24px]">
                 Welcome Back,
             </div>
-            <div className="text-[#E7F4FD] text-[32px] font-[1600px]">
+            <div className="text-[#E7F4FD] text-[32px] font-semibold">
                 Wisdom Umanah
             </div>
         </div>

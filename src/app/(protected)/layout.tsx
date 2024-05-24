@@ -1,7 +1,7 @@
 import DashboardHeader from "@/components/dashboard/dashboard-header";
 import DashboardNavAside from "@/components/dashboard/dashboard-nav-aside";
 import DashboardBody from "@/components/dashboard/dashboard-body";
-import Datacard from "@/components/dashboard/data-card";
+import DataCard from "@/components/dashboard/data-card";
 import DisputeCard from "@/components/dashboard/dispute-card";
 import EarningsCard from "@/components/dashboard/earnings-card";
 import Leaderboard from "@/components/dashboard/leader-board-card";
@@ -16,10 +16,8 @@ export default function DashboardLayout({ children }: PropsWithChildren) {
         <div className="h-fit space-y-[24px]">
           <DashboardHeader />
           <DashboardBody /> 
-          <div className="flex w-[100%] space-x-[24px]">
-            <Datacard />
-            <Datacard />
-            <Datacard />
+          <div>
+            <DataCard />
           </div>
           <div className="space-y-[24px]">
             <div className="flex space-x-[24px]">

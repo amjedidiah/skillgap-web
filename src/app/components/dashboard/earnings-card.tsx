@@ -37,6 +37,11 @@ const data = {
 
 const options = {
     borderRadius: 4,
+    layout: {
+        padding: {
+            // bottom: 80,
+        }
+    }
 };
 
 function BarChart() {
