@@ -11,6 +11,8 @@ import {
     Tooltip,
     Legend
 } from "chart.js"
+import { Menubar } from "../ui/menubar";
+import { MenubarDemo } from "./earnings-menu";
 
 ChartJS.register(
     CategoryScale,
@@ -93,7 +95,8 @@ export default function EarningsCard() {
                             5,435,353
                         </div>
                     </div>
-                    <div 
+                    <MenubarDemo />
+                    {/* <div 
                         className="flex text-[12px] text-[#8F8F8F] p-[8px] 
                         border-solid border-[1px] border-[#E6E6E6] rounded-[4px]">
                         <div className="flex">
@@ -138,7 +141,7 @@ export default function EarningsCard() {
                                 />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="">
