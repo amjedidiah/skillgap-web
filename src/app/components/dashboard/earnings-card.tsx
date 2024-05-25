@@ -1,57 +1,9 @@
 "use client"
+import React, { useEffect } from 'react';
 
-import Image from "next/image";
-import { Bar } from 'react-chartjs-2';
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend
-} from "chart.js"
-import { Menubar } from "../ui/menubar";
 import { MenubarDemo } from "./earnings-menu";
+import ChartComponent from './test';
 
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend
-);
-
-
-const data = {
-    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', "Sun"],
-    datasets: [
-    {
-        label: 'dataset',
-        data: [30000, 12000, 21000, 30000, 8500, 10000, 26000],
-        backgroundColor: '#1D9BF0',
-        borderColor: '#1D9BF0',
-        borderWidth: 1,
-    },
-    ],
-};
-
-const options = {
-    borderRadius: 4,
-    layout: {
-        padding: {
-            bottom: 80,
-            //comment out for edge browser: ...
-        }
-    }
-};
-
-function BarChart() {
-    return (
-        <Bar options={options} data={data} />
-    )
-}
 
 export default function EarningsCard() {
     return (
@@ -96,56 +48,10 @@ export default function EarningsCard() {
                         </div>
                     </div>
                     <MenubarDemo />
-                    {/* <div 
-                        className="flex text-[12px] text-[#8F8F8F] p-[8px] 
-                        border-solid border-[1px] border-[#E6E6E6] rounded-[4px]">
-                        <div className="flex">
-                            <div>
-                                2024
-                            </div>
-                            <div className="px-[6px] flex">
-                                <Image 
-                                    src="/images/elements33.svg"
-                                    alt=""
-                                    width={14}
-                                    height={14}
-                                    className=""
-                                />
-                            </div>
-                        </div>
-                        <div className="flex">
-                            <div>
-                                Jan
-                            </div>
-                            <div className="px-[6px] flex">
-                                <Image 
-                                    src="/images/elements33.svg"
-                                    alt=""
-                                    width={14}
-                                    height={14}
-                                    className=""
-                                />
-                            </div>
-                        </div>
-                        <div className="flex">
-                            <div className="text-nowrap">
-                                Week 1
-                            </div>
-                            <div className="px-[6px] flex">
-                                <Image 
-                                    src="/images/elements33.svg"
-                                    alt=""
-                                    width={14}
-                                    height={14}
-                                    className=""
-                                />
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
             </div>
-            <div className="">
-                <BarChart />
+            <div className="h-[70%]">
+                <ChartComponent />
             </div>
         </div>
     )
