@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 
 import { MenubarDemo } from "./earnings-menu";
-import ChartComponent from './test';
+import ChartComponent from './chartComponent';
 
 
 export default function EarningsCard() {
