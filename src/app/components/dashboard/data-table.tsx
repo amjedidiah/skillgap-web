@@ -15,6 +15,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { SGImgIcon } from "@/lib/icons"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -60,8 +61,31 @@ export function DataTable<TData, TValue>({
                 data-state={row.getIsSelected() && "selected"}
               >
                 {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id} className="pl-[36px] text-[12px] text-[#8F8F8F] pb-[10px] pt-[14px]">
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  <TableCell key={cell.id} className="pl-[36px] text-[12px] text-[#8F8F8F] pb-[10px] pt-[18px]">
+                    {
+                      cell.id.split("_")[1] === "DocSubmitted" ? (
+                        <div className="flex bg-[#E7F4FD] px-[7px] py-[4.5px] justify-center items-center w-fit rounded-[4px] space-x-[4px]">
+                          <div>
+                            <SGImgIcon />
+                          </div>
+                          <div>
+                            {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                          </div>
+                        </div>
+                      ) : cell.id.split("_")[1] === "Status" && cell.getValue() === "Resolved" ?  (
+                        <div className="bg-[#E2FEE6] text-[#2A9D0D] flex justify-center w-fit px-[8px] py-[3px] rounded-[24px]">
+                          {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                        </div>
+                      )  : cell.id.split("_")[1] === "Status" && cell.getValue() === "Ongoing" ?  (
+                        <div className="bg-[#FFFAE5] text-[#DBBC1C] flex justify-center w-fit px-[9px] py-[3px] rounded-[24px]">
+                          {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                        </div>
+                      ) : (
+                        <div>
+                          {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                        </div>
+                      )
+                    }
                   </TableCell>
                 ))}
               </TableRow>

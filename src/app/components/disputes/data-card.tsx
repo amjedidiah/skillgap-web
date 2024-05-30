@@ -1,4 +1,15 @@
+"use client"
+
 import Image from "next/image";
+
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+  } from "@/components/ui/dialogcopy"
 
 type Props = {
     item: string;
@@ -66,9 +77,12 @@ function DataCardItem({item, icon} : Props) {
 export default function DataCard() {
     return (
         <div className="flex w-[100%] space-x-[24px]">
-            <DataCardItem item={"Dispute"} icon={"/images/elements23.svg"}/>
-            <DataCardItem item={"Players"} icon={"images/elements21.svg"}/>
-            <DataCardItem item={"Referee"} icon={"/images/elements22.svg"}/>
+            <div className="w-[50%]">
+                <DataCardItem item={"Dispute"} icon={"/images/elements23.svg"}/>
+            </div>
+            <div className="w-[50%]">
+                <DataCardItem item={"Disputes"} icon={"/images/elements21.svg"}/>
+            </div>
         </div>
     )
 }

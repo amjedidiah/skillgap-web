@@ -60,7 +60,7 @@ export default function MapCard() {
             </div>
             <div className="flex space-x-[40px] justify-center">
                 <div className="flex items-center space-x-[16px]">
-                    <div className="w-[24px] h-[24px] bg-[#D2BD8A] rounded-full">
+                    <div className="w-[24px] h-[24px] bg-[#D2BD8A] rounded-[100%]">
 
                     </div>
                     <div className="text-[14px]">
@@ -73,7 +73,7 @@ export default function MapCard() {
                     </div>
                 </div>
                 <div className="flex items-center space-x-[16px]">
-                    <div className="w-[24px] h-[24px] bg-[#7699BB] rounded-full">
+                    <div className="w-[24px] h-[24px] bg-[#7699BB] rounded-[100%]">
 
                     </div>
                     <div className="text-[14px]">
@@ -86,7 +86,7 @@ export default function MapCard() {
                     </div>
                 </div>
                 <div className="flex items-center space-x-[16px]">
-                    <div className="w-[24px] h-[24px] bg-[#FFDC49] rounded-full">
+                    <div className="w-[24px] h-[24px] bg-[#FFDC49] rounded-[100%]">
 
                     </div>
                     <div className="text-[14px]">
@@ -99,7 +99,7 @@ export default function MapCard() {
                     </div>
                 </div>
                 <div className="flex items-center space-x-[16px]">
-                    <div className="w-[24px] h-[24px] bg-[#1D9BF0] rounded-full">
+                    <div className="w-[24px] h-[24px] bg-[#1D9BF0] rounded-[100%]">
 
                     </div>
                     <div className="text-[14px]">
@@ -112,7 +112,7 @@ export default function MapCard() {
                     </div>
                 </div>
                 <div className="flex items-center space-x-[16px]">
-                    <div className="w-[24px] h-[24px] bg-[#9DED1A] rounded-full">
+                    <div className="w-[24px] h-[24px] bg-[#9DED1A] rounded-[100%]">
 
                     </div>
                     <div className="text-[14px]">

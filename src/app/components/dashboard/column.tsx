@@ -9,7 +9,7 @@ export type Payment = {
   ID: string
   DateAndTime: string
   Players: string
-  Status: number
+  Status: string
   Referee: string
   DocSubmitted: string
 }
@@ -32,15 +32,15 @@ export const columns: ColumnDef<Payment>[] = [
     header: "Players",
   },
   {
-    accessorKey: "Status",
-    header: "Status",
-  },
-  {
     accessorKey: "Referee",
     header: "Referee",
   },
   {
     accessorKey: "DocSubmitted",
     header: "DocSubmitted",
+  },
+  {
+    accessorKey: "Status",
+    header: "Status",
   },
 ]
